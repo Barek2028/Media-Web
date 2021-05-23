@@ -1,0 +1,701 @@
+/*=====PUBLIC==STYLE==========*/
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: lucida sans;
+  height: 3500px;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.navbar {
+  padding: 20px 0;
+  overflow: hidden;
+  background: #ddd;
+  position: relative;
+}
+
+.navbar .logo {
+  width: 50%;
+  float: left;
+}
+
+.navbar .logo .logo-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar input,
+.navbar label {
+  position: absolute;
+  top: 12px;
+  right: 25px;
+}
+
+.navbar input {
+  display: none;
+}
+
+.navbar label {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/Navbar/open.png");
+  background-size: cover;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.navbar input:checked ~ .linkes {
+  display: block;
+}
+
+.navbar input:checked ~ label {
+  background: url("../images/Navbar/close.png") no-repeat;
+  background-size: cover;
+}
+
+.navbar .linkes {
+  width: 50%;
+  float: left;
+  list-style: none;
+}
+
+.navbar .list-item {
+  display: inline-block;
+}
+
+.navbar .list-item a:hover {
+  background: #ccc;
+}
+
+.navbar .list-item a {
+  text-decoration: none;
+  color: #222;
+  display: block;
+  padding: 10px 15px;
+}
+
+/*=======================MEDIA=FOR=NAVBAR==========================*/
+@media (min-width: 992px) {
+  .navbar label {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar .logo {
+    width: 100%;
+    float: none;
+  }
+
+  .navbar .linkes {
+    width: 100%;
+    float: none;
+    margin-top: 20px;
+  }
+
+  .navbar .linkes .list-item {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1165px) {
+  .navbar .logo {
+    width: 100%;
+    float: none;
+  }
+
+  .navbar .linkes {
+    width: 100%;
+    float: none;
+    margin-top: 20px;
+    display: none;
+  }
+
+  .navbar .linkes .list-item {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*===END=MEDIA=FOR=NAVBAR===*/
+
+/*============HOME-STYLE=======================*/
+
+.home {
+  height: 600px;
+  background: url("../images/Home/home-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+
+.home .home-informaiton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home .home-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #5e5e5e;
+  margin-bottom: 20px;
+}
+
+.home .home-info {
+  font-size: 35px;
+  color: #eb5424;
+  margin-bottom: 20px;
+}
+
+.home .home-desc {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #888;
+  padding-bottom: 10px;
+}
+
+.home span {
+  color: #000;
+}
+
+.home .home-btn {
+  background: #eb5424;
+  color: #fff;
+  font-size: 18px;
+  width: 150px;
+  border: 0;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home .home-btn:hover {
+  background: #fff;
+  color: #eb5424;
+}
+
+/*==========================MEDIA==HOME==STYLE=================*/
+
+@media (max-width: 768px) {
+  .home .home-title {
+    font-size: 40px;
+    color: #fff;
+  }
+
+  .home .home-info {
+    font-size: 25px;
+  }
+
+  .home .home-desc {
+    font-size: 15px;
+  }
+}
+/*===================WORK==STYLE========================*/
+
+.work {
+  height: auto;
+  padding: 50px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.work .work-title {
+  font-size: 60px;
+}
+
+.work .work-title span {
+  font-weight: normal;
+}
+
+.work .part {
+  margin-top: 20px;
+  width: 30%;
+  float: left;
+  height: auto;
+  padding: 100px 0;
+  border: 1px solid #888;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.work .part.normal {
+  margin-left: 0;
+}
+.work .part .icon {
+  font-size: 25px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.work .part .part-title {
+  font-size: 25px;
+  color: #eb5424;
+  margin-bottom: 20px;
+}
+
+.work .part .line {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.work .part-decs {
+  font-size: 14px;
+  color: #888;
+  padding: 20px;
+}
+
+/*==============MEDIA==MY==WORK==================================*/
+
+@media (max-width: 575px) {
+  .work .work-title {
+    text-align: center;
+  }
+  .work .part {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 576) (max-width: 768px) {
+  .work .work-title {
+    text-align: center;
+  }
+  .work .part {
+    width: 47%;
+  }
+  .work .last {
+    margin-left: 6%;
+    width: auto;
+    height: auto;
+  }
+}
+
+/*===========Portfolio==Style=================*/
+.portfolio {
+  background: #f8f8f8;
+  padding-top: 20px;
+  overflow: hidden;
+}
+.portfolio .portfolio-title {
+  text-align: center;
+  font-size: 35px;
+}
+
+.portfolio .portfolio-title span {
+  font-weight: normal;
+}
+
+.portfolio .portfolio-list {
+  list-style: none;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.portfolio .portfolio-item {
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+}
+
+.portfolio .portfolio-item.active {
+  background: #eb5424;
+  cursor: pointer;
+  color: #fff;
+}
+
+.box div {
+  width: 25%;
+  float: left;
+  font-size: 0;
+  position: relative;
+}
+
+.box div img {
+  width: 100%;
+}
+
+.box div .overlay {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(235, 84, 36, 0.5);
+  font-size: 15px;
+  opacity: 0;
+}
+
+.box div .overlay span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #eb5424;
+}
+
+.box div:hover .overlay {
+  opacity: 1;
+}
+
+/*==============MEDIA==Portfolio==========*/
+
+@media (max-width: 575px) {
+  .portfolio .portfolio-list .portfolio-item {
+    display: block;
+    margin: auto;
+  }
+  .box div {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .box div {
+    width: 50%;
+  }
+}
+
+/*
+      ========================================================
+                   PROFILE + Skills => STYLE 
+      ========================================================
+*/
+
+.profile_skills {
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.profile_skills .profile {
+  width: 50%;
+  float: left;
+}
+
+.profile_skills .skills {
+  width: 50%;
+  float: left;
+}
+
+.profile_skills .profile .profile-list {
+  list-style: none;
+}
+
+.profile_skills .profile .profile-list .profile-item {
+  margin-bottom: 8px;
+}
+
+.profile_skills .profile .profile-list .profile-item span {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.profile_skills .profile .profile-list .profile-item span.web {
+  font-weight: normal;
+  color: #eb5424;
+}
+
+.profile_skills .skills .skills-desc {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.profile_skills .skills .bar {
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.profile_skills .skills .bar .title {
+  float: left;
+}
+
+.profile_skills .skills .bar .perc {
+  float: right;
+  margin-right: 100px;
+}
+
+.profile_skills .skills .bar .parent {
+  height: 2px;
+  clear: both;
+  background: #f8f8f8;
+  position: relative;
+  top: 5px;
+}
+
+.profile_skills .skills .bar .parent span {
+  background: #eb5424;
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.profile_skills .skills .bar .parent span.sp1 {
+  width: 100%;
+}
+
+.profile_skills .skills .bar .parent span.sp2 {
+  width: 90%;
+}
+
+.profile_skills .skills .bar .parent span.sp3 {
+  width: 80%;
+}
+
+/*==GROPS==*/
+.profile_skills .profile .profile-skills,
+.profile_skills .skills .skills-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.profile_skills .profile .profile-skills span,
+.profile_skills .skills .skills-title span {
+  font-weight: normal;
+}
+
+/*
+  ======================================================================
+                      MEDIA -- SKILLS
+  ======================================================================
+*/
+
+@media (max-width: 575px) {
+  .profile_skills .profile,
+  .profile_skills .skills {
+    width: 100%;
+    float: none;
+  }
+  .profile_skills .profile {
+    margin-bottom: 20px;
+  }
+}
+
+/*
+  ==================================================================================
+                          CREATIVE -- STYLE
+  ==================================================================================
+*/
+
+.creative {
+  height: 500px;
+  background: url("../images/creative/about-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.creative .creative-info {
+  padding-top: 100px;
+  width: 50%;
+  float: right;
+}
+
+.creative .creative-info .info-title {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.creative .creative-info .info-title span {
+  font-weight: normal;
+}
+
+.creative .creative-info .info-dir {
+  font-size: 40px;
+  color: #eb5424;
+  margin-bottom: 20px;
+}
+
+.creative .creative-info .info-decs {
+  color: #000;
+  line-height: 1.9;
+}
+
+/*
+  ================================================================================
+                            MEDIA -- CREATIVE
+  ================================================================================
+*/
+
+@media (max-width: 991px) {
+  .creative .creative-info {
+    width: 100%;
+    padding-top: 10px;
+    float: none;
+  }
+  .creative .creative-inf .creative-dir {
+    font-size: 30px;
+  }
+}
+
+/*
+  ======================================================================================
+                        SOCIAL -- STYLE
+  ======================================================================================
+*/
+
+.social-media {
+  height: auto;
+  overflow: hidden;
+}
+
+.social-media .social {
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  padding: 100px 0 100px 60px;
+}
+
+.social-media .social.face {
+  background: #3b5998;
+}
+
+.social-media .social.twitter {
+  background: #498cbf;
+}
+
+.social-media .social.pin {
+  background: #cc2127;
+}
+
+.social-media .social .icon {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  text-align: center;
+  line-height: 50px;
+  color: #888;
+  float: left;
+  margin-right: 10px;
+}
+
+.social-media .social p {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+}
+
+.social-media .social p span {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.social-media .social p span.info2 {
+  font-weight: normal;
+}
+
+/*
+  ====================================================================================
+                                  MEDIA -- CREATIVE
+  ====================================================================================
+*/
+
+@media (max-width: 991px) {
+  .social-media .social {
+    width: 100%;
+    float: none;
+  }
+}
+
+/*
+  ====================================================================================
+                                  DROP -- STYLE
+  ====================================================================================
+*/
+
+.drop {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.drop .drop-title {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.drop form input {
+  box-sizing: border-box;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.drop .drop-title span {
+  font-weight: normal;
+}
+
+.drop form {
+  width: 70%;
+  margin: auto;
+}
+
+.drop form .form-input {
+  overflow: hidden;
+}
+.drop form .form-input input {
+  width: 49%;
+}
+
+.drop form .form-input input[type="text"] {
+  float: left;
+}
+
+.drop form .form-input input[type="email"] {
+  float: left;
+}
+
+.drop form input.sub {
+  width: 100%;
+}
+
+.drop form textarea {
+  width: 100%;
+  background: #ccc;
+}
+
+.drop form .form-input input .submit {
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 60%;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer p {
+  color: #888;
+  margin: 0;
+}
